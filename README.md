@@ -40,7 +40,7 @@ pip install torch torchvision torchsummary matplotlib numpy pandas pillow
 
 ### 2. Model Architecture
 - **VGG16 Variant:** A custom VGG16-like CNN is implemented, supporting optional batch normalization, and trained for 10 epochs on each dataset.
-- The model achieves high accuracy (>98% for MNIST, >90% for FashionMNIST).
+- The model achieves high accuracy (>98% for MNIST, >88% for FashionMNIST).
 
 ### 3. Adversarial Attacks
 - **FGSM Attack:** Generates adversarial examples by perturbing images in the direction of the gradient of the loss w.r.t the input.
