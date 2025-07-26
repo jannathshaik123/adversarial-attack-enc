@@ -54,7 +54,24 @@ pip install torch torchvision torchsummary matplotlib numpy pandas pillow
 - Training/validation loss and accuracy curves are plotted for both classifiers and the autoencoder.
 - Attack success and defense performance are visualized and printed.
 
-## Results and Summary
+## Results Summary
+
+This project evaluates the robustness of models against adversarial attacks (FGSM and PGD) using the MNIST and Fashion-MNIST datasets. The table below summarizes the key metrics:
+
+| Dataset         | Attack | Test Accuracy | Accuracy (w/o Def) | Avg. MSE   | Avg. PSNR | Avg. SSIM |
+|-----------------|--------|--------------|--------------------|------------|-----------|-----------|
+| MNIST           | FGSM   | 0.7494       | 0.2648             | 0.028629   | 15.99     | 0.6106    |
+| MNIST           | PGD    | 0.5532       | 0.0418             | 0.010043   | 20.83     | 0.8238    |
+| Fashion-MNIST   | FGSM   | 0.6526       | 0.1417             | 0.081761   | 11.23     | 0.2401    |
+| Fashion-MNIST   | PGD    | 0.4793       | 0.2942             | 0.022153   | 16.96     | 0.6392    |
+
+**Key Points:**
+- Both FGSM and PGD attacks significantly reduce model accuracy, especially without defense mechanisms.
+- PGD tends to be a stronger attack than FGSM, yielding lower accuracy but higher image similarity (SSIM) on MNIST.
+- Fashion-MNIST models are more vulnerable to FGSM than MNIST, as indicated by higher MSE and lower SSIM.
+- Metrics such as PSNR and SSIM provide insight into the perceptual quality of adversarial examples.
+
+---
 
 - The VGG16 variant achieves state-of-the-art accuracy on both MNIST and FashionMNIST.
 - Under FGSM and PGD attacks, classification accuracy drops significantly, demonstrating the effectiveness of adversarial attacks.
