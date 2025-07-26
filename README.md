@@ -60,10 +60,10 @@ This project evaluates the robustness of models against adversarial attacks (FGS
 
 | Dataset         | Attack | Test Accuracy | Accuracy (w/o Def) | Avg. MSE   | Avg. PSNR | Avg. SSIM |
 |-----------------|--------|--------------|--------------------|------------|-----------|-----------|
-| MNIST           | FGSM   | 0.7494       | 0.2648             | 0.028629   | 15.99     | 0.6106    |
-| MNIST           | PGD    | 0.5532       | 0.0418             | 0.010043   | 20.83     | 0.8238    |
-| Fashion-MNIST   | FGSM   | 0.6526       | 0.1417             | 0.081761   | 11.23     | 0.2401    |
-| Fashion-MNIST   | PGD    | 0.4793       | 0.2942             | 0.022153   | 16.96     | 0.6392    |
+| MNIST           | FGSM   | 0.7494       | 0.0928             | 0.028629   | 15.99     | 0.6106    |
+| MNIST           | PGD    | 0.5532       | 0.0000             | 0.010043   | 20.83     | 0.8238    |
+| Fashion-MNIST   | FGSM   | 0.6526       | 0.1012             | 0.081761   | 11.23     | 0.2401    |
+| Fashion-MNIST   | PGD    | 0.4793       | 0.0000             | 0.022153   | 16.96     | 0.6392    |
 
 **Key Points:**
 - Both FGSM and PGD attacks significantly reduce model accuracy, especially without defense mechanisms.
